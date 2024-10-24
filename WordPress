@@ -1,0 +1,9 @@
+<script>
+    jQuery(function() {
+const img = "";
+  jQuery("#e-n-accordion-item-2680").click(function(){
+    jQuery(".toggle-img img").attr('srcset',img);
+     jQuery(".toggle-img img").attr('src',img);
+  });
+});
+</script>
