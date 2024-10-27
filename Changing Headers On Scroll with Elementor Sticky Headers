@@ -1,0 +1,29 @@
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('scroll', function() {
+        let y = window.scrollY;
+        let scroll = document.getElementById('scroll');
+        if (y > 150) { /* change this value here to make it show up at your desired scroll location. */
+            scroll.classList.add('headershow');
+        } else {
+            scroll.classList.remove('headershow');
+        }
+    });
+});
+</script>
+<style>
+.elementor-nav-menu__container{
+top:0px!important;
+}
+#scroll.headershow{
+transform: translateY(0);
+}
+#scroll{
+position: fixed;
+top:0;
+width: 100%;
+-webkit-transition: transform 0.34s ease;
+transition : transform 0.34s ease;
+transform: translateY(-200px); /*adjust this value to the height of your header*/
+}
+</style>
